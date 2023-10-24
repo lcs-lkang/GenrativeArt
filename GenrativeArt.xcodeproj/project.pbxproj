@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		AC2C37C52AE81AB3005D0DC7 /* GenrativeArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */; };
-		AC2C37C72AE81AB3005D0DC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C37C62AE81AB3005D0DC7 /* ContentView.swift */; };
 		AC2C37C92AE81AB5005D0DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */; };
 		AC2C37CC2AE81AB5005D0DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C37CB2AE81AB5005D0DC7 /* Preview Assets.xcassets */; };
+		AC2C37D52AE81D6C005D0DC7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC2C37C12AE81AB3005D0DC7 /* GenrativeArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenrativeArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrativeArtApp.swift; sourceTree = "<group>"; };
-		AC2C37C62AE81AB3005D0DC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2C37CB2AE81AB5005D0DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,7 @@
 		AC2C37C32AE81AB3005D0DC7 /* GenrativeArt */ = {
 			isa = PBXGroup;
 			children = (
-				AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */,
-				AC2C37C62AE81AB3005D0DC7 /* ContentView.swift */,
+				AC2C37D32AE81D58005D0DC7 /* views */,
 				AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */,
 				AC2C37CA2AE81AB5005D0DC7 /* Preview Content */,
 			);
@@ -65,6 +64,15 @@
 				AC2C37CB2AE81AB5005D0DC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC2C37D32AE81D58005D0DC7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */,
+				AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2C37C72AE81AB3005D0DC7 /* ContentView.swift in Sources */,
 				AC2C37C52AE81AB3005D0DC7 /* GenrativeArtApp.swift in Sources */,
+				AC2C37D52AE81D6C005D0DC7 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

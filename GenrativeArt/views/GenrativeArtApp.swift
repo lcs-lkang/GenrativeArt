@@ -11,7 +11,7 @@ import SwiftUI
 struct GenrativeArtApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TitleView()
         }
     }
 }
