@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-struct TriangleBottomRight: Shape {
+struct TriangleTopRight: Shape {
     func path(in rect: CGRect) -> Path {
         
         //Make path
@@ -68,7 +68,7 @@ struct TriangleBottomLeft: Shape {
 }
 
 
-struct TriangleTopRight: Shape {
+struct TriangleBottomRight: Shape {
     func path(in rect: CGRect) -> Path {
         
         //Make path
@@ -86,4 +86,21 @@ struct TriangleTopRight: Shape {
         
     }
     
+}
+
+
+enum Coin: Int {
+    case heads = 1
+    case tails = 2
+    static func flip() -> Coin {
+        let decision = Bool.random()
+        
+        if decision == true{
+            return.heads
+        }
+        
+            else {
+            return.tails
+        }
+    }
 }

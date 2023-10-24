@@ -7,28 +7,43 @@
 
 import SwiftUI
 
-
-
-
 struct TitleView: View {
+    
+    let flipOne = Coin.flip()
+    
     var body: some View {
-        VStack{
+        ZStack{
+            
+            if flipOne == .heads {
             TriangleTopRight()
-            .aspectRatio(1.0, contentMode: .fit)
+                    .stroke(.black)
+                    .fill(.clear)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
             
-            TriangleBottomLeft()
-                .aspectRatio(1.0, contentMode: .fit)
+                TriangleBottomLeft()
+                    .stroke(.black)
+                    .fill(.clear)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+            } else {
+                
+                TriangleBottomRight()
+                    .stroke(.black)
+                    .fill(.clear)
+                    .aspectRatio(1.0, contentMode: .fit)
             
-            TriangleTopLeft()
-                .aspectRatio(1.0, contentMode: .fit)
-            
-            TriangleBottomRight()
-                .aspectRatio(1.0, contentMode: .fit)
+                TriangleTopLeft()
+                    .stroke(.black)
+                    .fill(.clear)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+            }
             
         }
         .padding()
     }
-
+    
 }
 #Preview {
     TitleView()
