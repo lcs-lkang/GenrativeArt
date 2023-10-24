@@ -7,6 +7,32 @@
 
 import SwiftUI
 
+
+
+
+
+
+struct TriangleBottomLeft: Shape {
+    func path(in rect: CGRect) -> Path {
+        
+        //Make path
+        var path = Path()
+        
+        //Define path
+        path.move(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        //Return path
+        return path
+        
+        
+    }
+    
+}
+
+
 struct TriangleTopRight: Shape {
     func path(in rect: CGRect) -> Path {
         
@@ -33,6 +59,9 @@ struct TitleView: View {
         VStack{
             TriangleTopRight()
             .aspectRatio(1.0, contentMode: .fit)
+            
+            TriangleBottomLeft()
+                .aspectRatio(1.0, contentMode: .fit)
         }
         .padding()
     }
