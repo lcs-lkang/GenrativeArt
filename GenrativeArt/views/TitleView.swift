@@ -9,7 +9,25 @@ import SwiftUI
 
 
 
-
+struct TriangleTopLeft: Shape {
+    func path(in rect: CGRect) -> Path {
+        
+        //Make path
+        var path = Path()
+        
+        //Define path
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        //Return path
+        return path
+        
+        
+    }
+    
+}
 
 
 struct TriangleBottomLeft: Shape {
@@ -62,6 +80,10 @@ struct TitleView: View {
             
             TriangleBottomLeft()
                 .aspectRatio(1.0, contentMode: .fit)
+            
+            TriangleTopLeft()
+                .aspectRatio(1.0, contentMode: .fit)
+            
         }
         .padding()
     }
