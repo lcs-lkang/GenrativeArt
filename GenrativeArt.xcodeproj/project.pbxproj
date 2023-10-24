@@ -11,6 +11,7 @@
 		AC2C37C92AE81AB5005D0DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */; };
 		AC2C37CC2AE81AB5005D0DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C37CB2AE81AB5005D0DC7 /* Preview Assets.xcassets */; };
 		AC2C37D52AE81D6C005D0DC7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */; };
+		AC2C37D82AE8262E005D0DC7 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C37D72AE8262E005D0DC7 /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2C37CB2AE81AB5005D0DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		AC2C37D72AE8262E005D0DC7 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		AC2C37C32AE81AB3005D0DC7 /* GenrativeArt */ = {
 			isa = PBXGroup;
 			children = (
+				AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */,
+				AC2C37D62AE825F0005D0DC7 /* Helpers */,
 				AC2C37D32AE81D58005D0DC7 /* views */,
 				AC2C37C82AE81AB5005D0DC7 /* Assets.xcassets */,
 				AC2C37CA2AE81AB5005D0DC7 /* Preview Content */,
@@ -69,10 +73,17 @@
 		AC2C37D32AE81D58005D0DC7 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				AC2C37C42AE81AB3005D0DC7 /* GenrativeArtApp.swift */,
 				AC2C37D42AE81D6C005D0DC7 /* TitleView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		AC2C37D62AE825F0005D0DC7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C37D72AE8262E005D0DC7 /* Shape.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2C37C52AE81AB3005D0DC7 /* GenrativeArtApp.swift in Sources */,
+				AC2C37D82AE8262E005D0DC7 /* Shape.swift in Sources */,
 				AC2C37D52AE81D6C005D0DC7 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
