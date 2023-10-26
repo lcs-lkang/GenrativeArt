@@ -1,69 +1,70 @@
 //
-//  TitleView.swift
-//  GenrativeArt
+//  TileView.swift
+//  GenerativeArt
 //
-//  Created by Chen-Ning Kang on 2023-10-24.
+//  Created by Lawrence Kang on 24/10/2023.
 //
 
 import SwiftUI
 
+
 struct TitleView: View {
     
+    //MARK: Stored Properties
     
-//    Stored properties
+    //Determine the diagonal
+    let flipOne = Coin.tails
     
+    //Determine whether top or bottom triangle gets filled with colour one
+    let flipTwo = Coin.heads
+    
+    //Choosing marker colours
     let markerOne = Color.red
-    let markerTwo  = Color.orange
+    let markerTwo = Color.blue
     
-    let flipForColor = Coin.flip()
-    let flipOne = Coin.flip()
+    //Decide on colors
+    let flipForColor = Coin.heads
     
-    var colorOne : Color {
-        return flipForColor  == .heads ? markerOne : markerTwo
-//        if flipForColor == .heads {
-//            return markerOne
-//        } else {
-//            return markerTwo
-//        }
+    //MARK: Computed Properties
+    
+    //Set colours based on the coin flip
+    var colourOne: Color {
+        return flipForColor == .heads ? markerOne : markerTwo
     }
     
-    
-    var colorTwo : Color {
-        return flipForColor  == .heads ? markerTwo : markerOne
-    
-//        if flipForColor == .heads {
-//            return markerTwo
-//        } else {
-//            return markerOne
-//        }
+    var colourTwo: Color {
+        return flipForColor == .heads ? markerTwo : markerOne
     }
     
-//    Computed Properties
     var body: some View {
-        ZStack{
+        ZStack {
             
             if flipOne == .heads {
-            TriangleTopRight()
+                
+                //Top Right triangle
+                TriangleTopRight()
                     .stroke(.black)
-                    .fill(colorOne)
+                    .fill(flipTwo == .heads ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
-            
+                //Bottom Left triangle
                 TriangleBottomLeft()
                     .stroke(.black)
-                    .fill(colorTwo)
+                    .fill(flipTwo == .tails ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             } else {
                 
-                TriangleBottomRight()
-                    .stroke(.black)
-                    .fill(.clear)
-                    .aspectRatio(1.0, contentMode: .fit)
-            
+                //Top Left triangle
                 TriangleTopLeft()
                     .stroke(.black)
-                    .fill(.clear)
+                    .fill(flipTwo == .heads ? colourOne : .clear)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+                //Bottom Right Triangle
+                TriangleBottomRight()
+                    .stroke(.black)
+                    .fill(flipTwo == .tails ? colourOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             }
@@ -71,8 +72,8 @@ struct TitleView: View {
         }
         .padding()
     }
-    
 }
+
 #Preview {
     TitleView()
 }
