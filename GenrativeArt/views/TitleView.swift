@@ -19,20 +19,23 @@ struct TitleView: View {
     let flipOne = Coin.flip()
     
     var colorOne : Color {
-        if flipForColor == .heads {
-            return markerOne
-        } else {
-            return markerTwo
-        }
+        return flipForColor  == .heads ? markerOne : markerTwo
+//        if flipForColor == .heads {
+//            return markerOne
+//        } else {
+//            return markerTwo
+//        }
     }
     
     
     var colorTwo : Color {
-        if flipForColor == .heads {
-            return markerTwo
-        } else {
-            return markerOne
-        }
+        return flipForColor  == .heads ? markerTwo : markerOne
+    
+//        if flipForColor == .heads {
+//            return markerTwo
+//        } else {
+//            return markerOne
+//        }
     }
     
 //    Computed Properties
