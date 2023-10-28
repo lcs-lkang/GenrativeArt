@@ -82,7 +82,7 @@ struct TitleView: View {
             }
             
         }
-        .padding()
+        
     }
 }
 
