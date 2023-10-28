@@ -11,22 +11,20 @@ struct GridView: View {
     var body: some View {
         
         Grid(horizontalSpacing: 0, verticalSpacing: 0) {
-            GridRow{
-                ForEach(1..<4) {i in
+//            Number of Rows
+            ForEach(1..<6){ j in
+                
+                
+                
+                GridRow{
+                    
+//                    Repeats within row
+                    ForEach(1..<4) {i in
                         TitleView()
+                    }
                 }
+                
             }
-            GridRow{
-                ForEach(1..<4) {i in
-                        TitleView()
-                }
-            }
-            GridRow{
-                ForEach(1..<4) {i in
-                        TitleView()
-                }
-            }
-            
         }
     }
 }
