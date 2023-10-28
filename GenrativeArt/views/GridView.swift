@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct GridView: View {
+    
+//    Stored properties
+    let columns = 7
+    let rows = 4
+    
+    
+//    Computed properties
     var body: some View {
         
-        Grid(horizontalSpacing: 0, verticalSpacing: 0) {
-//            Number of Rows
-            ForEach(1..<6){ j in
-                
-                
-                
-                GridRow{
+        VStack {
+            Grid(horizontalSpacing: 0, verticalSpacing: 0) {
+    //            Number of Rows
+                ForEach(0..<rows, id: \.self){ j in
                     
-//                    Repeats within row
-                    ForEach(1..<4) {i in
-                        TitleView()
+                    
+                    
+                    GridRow{
+                        
+    //                    Repeats within row
+                        ForEach(0..<columns, id: \.self) {i in
+                            TitleView()
+                        }
                     }
+                    
                 }
-                
             }
         }
     }
